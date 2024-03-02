@@ -1,0 +1,152 @@
+body {
+    /* Estilos para el elemento body del documento */
+    display: flex;
+    /* Se establece el tipo de display a flex para permitir un diseño flexible */
+    flex-direction: column;
+    /*los elementos hijos se apilan verticalmente */
+    justify-content: center;
+    /* Centra los elementos hijos horizontalmente */
+    align-items: center;
+    /* Centra los elementos hijos verticalmente */
+    height: 200vh;
+    /* Altura del body es el 200% de la altura de la ventana del navegador */
+    background-color: #f0f0f0;
+    /* Color de fondo del body */
+    font-family: Arial, sans-serif;
+    /* Tipo de letra del body */
+    overflow: auto;
+    /* Permite el desplazamiento si el contenido excede la altura del body */
+}
+
+.bgvideo {
+    /* Estilos para el elemento con la clase bgvideo */
+    position: fixed;
+    /* Posición fija, no se mueve al hacer scroll */
+    right: 0;
+    /* Alineado a la derecha */
+    bottom: 0;
+    /* Alineado al fondo */
+    min-width: 100%;
+    /* Ancho mínimo del 100% */
+    min-height: 100%;
+    /* Altura mínima del 100% */
+}
+
+.content {
+    /* Estilos para el elemento con la clase content */
+    position: relative;
+    display: flex;
+    /* Posición relativa al elemento padre */
+    background: rgba(0, 0, 0, 0.5);
+    /* Color de fondo negro con opacidad del 50% */
+    width: 98%;
+    /* Ancho del 98% */
+    padding: 20px;
+    /* Relleno de 20px en todos los lados */
+    height: 200vh;
+    /* Altura del contenedor es el 200% de la altura de la ventana del navegador */
+    display: flex;
+    /* Se establece el tipo de display a flex para permitir un diseño flexible */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+}
+
+.content2 {
+    /* Estilos para el elemento con la clase content2 */
+    position: relative;
+    /* Posición relativa al elemento padre */
+    background: rgba(0, 0, 0, 0.5);
+    /* Color de fondo negro con opacidad del 50% */
+    width: 98%;
+    /* Ancho del 98% */
+    padding: 20px;
+    /* Relleno de 20px en todos los lados */
+    height: 200vh;
+    /* Altura del contenedor es el 200% de la altura de la ventana del navegador */
+    display: flex;
+    /* Se establece el tipo de display a flex para permitir un diseño flexible */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+}
+
+h2 {
+    /* Estilos para el elemento h2 */
+    text-align: center;
+    /* Centra el texto */
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+#formularioestudiante {
+    background-image: url('https://dl.dropboxusercontent.com/scl/fi/cnr97ll2ea3gjvxme7fne/fondo.png?rlkey=m2rb7por5ymmr1esr7pnug387&dl=0');
+    background-size: cover;
+    /* Imagen de fondo */
+    padding: 70px;
+    /* Relleno de 70px en todos los lados */
+    border-radius: 10px;
+    /* Borde redondeado con un radio de 10px */
+    box-shadow: 10px 12px 10px 0px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor del formulario */
+    width: 1000px;
+    /* Ancho del formulario es 1000px */
+    height: fit-content;
+}
+
+#sintesisdevideo {
+    background-color: rgb(233, 233, 233);
+    /* Color de fondo blanco */
+    padding: 70px;
+    /* Relleno de 70px en todos los lados */
+    border-radius: 10px;
+    /* Borde redondeado con un radio de 10px */
+    box-shadow: 10px 12px 10px 0px rgba(0, 0, 0, 0.1);
+    /* Sombra alrededor del formulario */
+    width: 1000px;
+    /* Ancho del formulario es 1000px */
+    height: fit-content;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    /* Estilos para los elementos input de tipo number, text, email y password */
+    width: 100%;
+    /* Ancho del 100% */
+    padding: 10px;
+    /* Relleno de 10px en todos los lados */
+    margin: 10px 0;
+    /* Margen superior e inferior de 10px, y lateral de 0 */
+    border-radius: 5px;
+    /* Borde redondeado con un radio de 5px */
+    border: 1px solid #ccc;
+    /* Borde de 1px de ancho, sólido y de color #ccc */
+}
+
+input[type="submit"] {
+    /* Estilos para el elemento input de tipo submit */
+    background-color: #4CAF50;
+    /* Color de fondo verde */
+    color: white;
+    /* Color de texto blanco */
+    padding: 10px 20px;
+    /* Relleno de 10px en la parte superior e inferior, y de 20px en los lados */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Borde redondeado con un radio de 5px */
+    cursor: pointer;
+    /* El cursor se convierte en una mano al pasar sobre el elemento */
+    margin-top: 10px;
+    /* Margen superior de 10px */
+}
+
+input[type="submit"]:hover {
+    /* Estilos para el elemento input de tipo submit cuando el cursor pasa sobre él */
+    background-color: #45a049;
+    /* Cambia el color de fondo a un tono de verde diferente */
+}
