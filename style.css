@@ -30,6 +30,9 @@ body {
     /* Ancho mínimo del 100% */
     min-height: 100%;
     /* Altura mínima del 100% */
+    z-index: -20;
+    /*determina el orden de apilamiento de los elementos en el eje Z
+    (hacia adelante y hacia atrás en la pantalla)*/
 }
 
 .content {
@@ -94,6 +97,7 @@ h2 {
     width: 1000px;
     /* Ancho del formulario es 1000px */
     height: fit-content;
+    z-index: 10;
 }
 
 #sintesisdevideo {
@@ -127,26 +131,103 @@ input[type="password"] {
     /* Borde de 1px de ancho, sólido y de color #ccc */
 }
 
-input[type="submit"] {
-    /* Estilos para el elemento input de tipo submit */
-    background-color: #4CAF50;
-    /* Color de fondo verde */
-    color: white;
-    /* Color de texto blanco */
-    padding: 10px 20px;
-    /* Relleno de 10px en la parte superior e inferior, y de 20px en los lados */
-    border: none;
-    /* Sin borde */
-    border-radius: 5px;
-    /* Borde redondeado con un radio de 5px */
-    cursor: pointer;
-    /* El cursor se convierte en una mano al pasar sobre el elemento */
-    margin-top: 10px;
-    /* Margen superior de 10px */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type="submit"]:hover {
-    /* Estilos para el elemento input de tipo submit cuando el cursor pasa sobre él */
-    background-color: #45a049;
-    /* Cambia el color de fondo a un tono de verde diferente */
+.button {
+    position: relative;
+    /* Establece la posición relativa para el elemento con la clase "button" */
+    width: 120px;
+    /* Establece el ancho del elemento */
+    height: 40px;
+    /* Establece la altura del elemento */
+    background-color: #5e5c5c;
+    /* Establece el color de fondo del elemento */
+    display: flex;
+    /* Establece el tipo de display a flex para permitir un diseño flexible */
+    align-items: center;
+    /* Centra los elementos hijos verticalmente */
+    color: white;
+    /* Establece el color del texto del elemento */
+    flex-direction: column;
+    /* Establece la dirección de los elementos hijos a columna */
+    justify-content: center;
+    /* Centra los elementos hijos horizontalmente */
+    border: none;
+    /* Elimina el borde del elemento */
+    padding: 12px;
+    /* Establece el espacio interno del elemento */
+    gap: 12px;
+    /* Establece el espacio entre los elementos hijos */
+    border-radius: 8px;
+    /* Establece el radio de borde del elemento */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima del elemento */
+}
+
+.button::before {
+    content: '';
+    /* Agrega contenido antes del elemento */
+    position: absolute;
+    /* Establece la posición absoluta para el pseudo-elemento */
+    inset: 0;
+    /* Establece los valores superior, derecho, inferior e izquierdo a 0 */
+    left: -4px;
+    /* Desplaza el pseudo-elemento hacia la izquierda */
+    top: -1px;
+    /* Desplaza el pseudo-elemento hacia arriba */
+    margin: auto;
+    /* Centra el pseudo-elemento horizontalmente */
+    width: 128px;
+    /* Establece el ancho del pseudo-elemento */
+    height: 48px;
+    /* Establece la altura del pseudo-elemento */
+    border-radius: 10px;
+    /* Establece el radio de borde del pseudo-elemento */
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    /* Establece un fondo degradado para el pseudo-elemento */
+    z-index: -10;
+    /* Establece la posición en el eje Z del pseudo-elemento */
+    pointer-events: none;
+    /* Evita que el pseudo-elemento reciba eventos de puntero */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Establece una transición para todas las propiedades durante 0.6 segundos */
+}
+
+.button::after {
+    content: "";
+    /* Agrega contenido después del elemento */
+    z-index: -1;
+    /* Establece la posición en el eje Z del pseudo-elemento */
+    position: absolute;
+    /* Establece la posición absoluta para el pseudo-elemento */
+    inset: 0;
+    /* Establece los valores superior, derecho, inferior e izquierdo a 0 */
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    /* Establece un fondo degradado para el pseudo-elemento */
+    transform: translate3d(0, 0, 0) scale(0.95);
+    /* Aplica una transformación al pseudo-elemento */
+    filter: blur(20px);
+    /* Aplica un efecto de desenfoque al pseudo-elemento */
+}
+
+.button:hover::after {
+    /* Estilos cuando el cursor se encuentra sobre el elemento */
+    filter: blur(30px);
+    /* Aumenta el efecto de desenfoque */
+}
+
+.button:hover::before {
+    /* Estilos cuando el cursor se encuentra sobre el elemento */
+    transform: rotate(-180deg);
+    /* Rota el pseudo-elemento */
+}
+
+.button:active::before {
+    /* Estilos cuando el elemento está activo (presionado) */
+    scale: 0.7;
+    /* Reduce la escala del pseudo-elemento */
 }
